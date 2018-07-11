@@ -3,6 +3,7 @@ drivers ={};
 
 function findMatching(drivers, name){
   var arr = []
+  var i = 0
   for(const driver of drivers){
     if(name == driver){
        arr[i] = driver
