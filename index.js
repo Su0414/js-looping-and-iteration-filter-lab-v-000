@@ -5,7 +5,7 @@ function findMatching(drivers, name){
   var arr = []
   var i = 0
   for(const driver of drivers){
-    if(name == driver){
+    if(name.toLowerCase() == driver){
        arr[i] = driver
        i = i + 1
     }
