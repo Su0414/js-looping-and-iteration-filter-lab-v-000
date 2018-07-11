@@ -2,15 +2,12 @@
 drivers ={};
 
 function findMatching(drivers, name){
-  var arr = []
-  var i = 0
-  for(const driver of drivers){
-    if(name.toLowerCase() == driver.toLowerCase()){
-       arr[i] = driver
-       i = i + 1
-    }
-  }
-  return arr;
+
+  return drivers.filter(function (driver) {
+   return driver.toLowerCase() === name.toLowerCase();
+ });
+
+
 }
 
 function fuzzyMatch(drivers, name){
@@ -18,7 +15,7 @@ function fuzzyMatch(drivers, name){
   var i = 0
   for(const driver of drivers){
 
-    if(driver.toLowerCase().includes(name.toLowerCase())){
+    if(driver.toLowerCase().includes(name.toLowerCase()) && name.toLowerCase()){
        arr[i] = driver
        i = i + 1
     }
