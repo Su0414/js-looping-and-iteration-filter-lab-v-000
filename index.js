@@ -2,9 +2,14 @@
 drivers ={};
 
 function findMatching(drivers, name){
+  var arr = []
   for(const driver of drivers){
-    return driver
+    if(name == driver){
+       arr[i] = driver
+       i = i + 1
+    }
   }
+  return arr;
 }
 
 function fuzzyMatch(drivers, string){
