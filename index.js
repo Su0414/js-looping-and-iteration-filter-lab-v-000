@@ -11,17 +11,10 @@ function findMatching(drivers, name){
 }
 
 function fuzzyMatch(drivers, name){
-  var arr = []
-  var i = 0
-  for(const driver of drivers){
-
-    if(driver.toLowerCase().includes(name.toLowerCase()) && name.toLowerCase()){
-       arr[i] = driver
-       i = i + 1
-    }
-  }
-  return arr;
-
+  let len = name.length;
+    return drivers.filter(function (driver) {
+      return driver.slice(0, len) === name;
+    });
 }
 
 function matchName(drivers, user){
