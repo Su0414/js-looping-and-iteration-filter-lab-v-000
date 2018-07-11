@@ -17,7 +17,8 @@ function fuzzyMatch(drivers, name){
   var arr = []
   var i = 0
   for(const driver of drivers){
-    if(driver.toLowerCase().includes(name.toLowerCase())){
+
+    if(driver.toLowerCase().split("name").includes(name.toLowerCase())){
        arr[i] = driver
        i = i + 1
     }
