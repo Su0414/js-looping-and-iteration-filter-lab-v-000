@@ -13,11 +13,19 @@ function findMatching(drivers, name){
   return arr;
 }
 
-function fuzzyMatch(drivers, string){
-
+function fuzzyMatch(drivers, name){
+  var arr = []
+  var i = 0
+  for(const driver of drivers){
+    if(name.toLowerCase() == driver.toLowerCase()){
+       arr[i] = driver
+       i = i + 1
+    }
+  }
+  return arr;
 
 }
 
-function matchName(drivers, string){
+function matchName(drivers, name){
 
 }
